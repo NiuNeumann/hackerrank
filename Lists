@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    N = int(input())
+
+input_list = []
+for _ in range(N):
+    input_line = input().split()
+    cmd = input_line[0]
+    args = input_line[1:]
+    if cmd != "print":
+        cmd += "(" + ",".join(args) + ")"
+        eval("input_list." + cmd)
+    else:
+        print(input_list)
