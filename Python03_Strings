@@ -11,3 +11,37 @@ if __name__ == '__main__':
     s = input()
     result = swap_case(s)
     print(result)
+
+
+##  String Split and Join
+
+def split_and_join(line):
+    return "-".join(line.split(" "))
+    # write your code here
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+    
+##  What's Your Name?
+
+def print_full_name(a, b):
+    print("Hello %s %s! You just delved into python." % (a, b))
+
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
+    
+    
+## Mutations
+
+def mutate_string(string, position, character):
+    return string[:position] + character + string[(position + 1):]
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
