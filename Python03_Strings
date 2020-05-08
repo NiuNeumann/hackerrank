@@ -115,3 +115,17 @@ if __name__ == '__main__':
     string, max_width = input(), int(input())
     result = wrap(string, max_width)
     print(result)
+
+
+##  Designer Door Mat
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+height, width = map(int, input().split())
+
+for c in range(height // 2):
+    print(((2 * c + 1) * '.|.').center(width, '-'))
+
+print('WELCOME'.center(width, '-'))
+
+for c in range(height // 2, 0, -1):
+    print(((2 * (c - 1) + 1) * '.|.').center(width, '-'))
