@@ -129,3 +129,21 @@ print('WELCOME'.center(width, '-'))
 
 for c in range(height // 2, 0, -1):
     print(((2 * (c - 1) + 1) * '.|.').center(width, '-'))
+
+
+##  Alphabet Rangoli
+
+import string
+
+def print_rangoli(size):
+    alpha = string.ascii_lowercase
+    width = size * 4 - 3
+    L = []
+    for i in range(size):
+        s = '-'.join(alpha[i:size])     # creates a string starting with a and going to the ith letter
+        L.append((s[::-1]+s[1:]).center(width, '-'))    # reads the string s from right to left and back to right and saves it to L
+    print('\n'.join(L[:0:-1]+L))    # prints the list L from last item to first and back to last
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
